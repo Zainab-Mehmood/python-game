@@ -1,18 +1,18 @@
-# Star Wars Adventure Game 🚀
+# Star War Name 🚀
 
 ## Description
-Embark on an intergalactic adventure with this Star Wars-inspired game! Choose your path, battle enemies, and explore distant planets in an exciting Python-powered text-based game.
+Embark on an intergalactic adventure with this Star Wars-inspired game! This project generates a unique Star Wars name based on your personal inputs.
 
 ## Features
-- 🛡️ Multiple character classes to choose from.
-- ⚔️ Dynamic battles with enemies across the galaxy.
-- 🌌 Explore diverse planets and uncover hidden secrets.
-- 🎮 Save and load your progress anytime.
+- 🌟 Generates a Star Wars-style name using fun combinations.
+- 🛡️ Simple and user-friendly interface.
+- 🎮 Quick and engaging process for fans and creators alike.
 
 ## Table of Contents
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Game Code](#game-code)
 - [Contributing](#contributing)
 - [License](#license)
 - [Author](#author)
@@ -26,7 +26,7 @@ Embark on an intergalactic adventure with this Star Wars-inspired game! Choose y
    ```
    cd python-game
    ```
-3. Install the required dependencies:
+3. Install the required dependencies (if any):
    ```
    pip install -r requirements.txt
    ```
@@ -36,10 +36,38 @@ Embark on an intergalactic adventure with this Star Wars-inspired game! Choose y
    ```
    python game.py
    ```
-2. Follow the prompts to select your character and begin your adventure!
+2. Follow the prompts to enter your details and generate your Star Wars name!
 
 ### Example Screenshot:
 ![Game Screenshot](screenshot.png)
+
+## Game Code
+```python
+import time, os
+
+def STAR_WAR_NAME(first_name, last_name, mum_maiden, city):
+  first_slice = first_name[:3]
+  second_slice = last_name[:3]
+  third_slice = mum_maiden[:2]
+  forth_slice = city[-3:][::-1]
+  print()
+  print("Generating your Star War name...")
+  full_name = f"{first_slice}{second_slice} {third_slice}{forth_slice}"
+  print(f"> Your Star Wars✨ name is {full_name}.")
+
+
+def main():
+  print("STAR WARS NAME GENERATOR⭐")
+  print()
+  first_name = input("Enter your first name: ").capitalize().strip()
+  last_name = input("Enter your last name: ").lower().strip()
+  mum_maiden = input("Enter your Mum's maiden name: ").capitalize().strip()
+  city = input("Enter the city where you were born: ").capitalize().strip()
+
+  STAR_WAR_NAME(first_name, last_name, mum_maiden, city)
+
+main()
+```
 
 ## Contributing
 Contributions are welcome! Here's how you can help:
